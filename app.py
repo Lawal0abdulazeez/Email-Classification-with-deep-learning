@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Load the model and tokenizer
-model = load_model('cnn_lstm.h5')
+model = load_model('cnn_rnn.h5')
 
 with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
@@ -14,7 +14,7 @@ with open('tokenizer.pickle', 'rb') as handle:
 def preprocess_input(text):
     # Tokenize and pad the input text
     sequences = tokenizer.texts_to_sequences([text])
-    padded_sequences = pad_sequences(sequences, maxlen=150)  # Adjust maxlen as needed
+    padded_sequences = pad_sequences(sequences, maxlen=100)  # Adjust maxlen as needed
     return padded_sequences
 
 # Streamlit app layout

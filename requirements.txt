@@ -1,0 +1,17 @@
+# Core Libraries
+numpy==1.24.3
+pandas==2.0.3
+
+# Deep Learning Libraries
+tensorflow==2.14.0
+keras==2.14.0
+
+# Web Application Framework
+streamlit==1.25.0
+
+# Text Processing
+nltk==3.8.1
+
+
+# Other useful libraries
+scikit-learn==1.2.2
